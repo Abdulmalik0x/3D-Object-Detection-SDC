@@ -208,7 +208,6 @@ def detect_objects(input_bev_maps, model, configs):
         elif 'fpn_resnet' in configs.arch:
             # decode output and perform post-processing
             
-            م     
             #######
            
             detections = decode(_sigmoid(outputs['hm_cen']), _sigmoid(outputs['cen_offset']), outputs['direction'], outputs['z_coor'], outputs['dim'], K=configs.K)
